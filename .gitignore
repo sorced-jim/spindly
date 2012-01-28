@@ -8,6 +8,7 @@ tags
 bin/read_dump
 bin/read_stream
 bin/create_nv_block
+src/spdy_config.h
 autom4te.cache
 Makefile
 compile
