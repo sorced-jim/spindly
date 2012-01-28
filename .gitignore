@@ -9,7 +9,6 @@ bin/read_dump
 bin/read_stream
 bin/create_nv_block
 autom4te.cache
-src/spdy_config.h.in
 Makefile
 compile
 config.log
