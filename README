@@ -16,6 +16,11 @@ Wiki:
 Code:
   https://github.com/bagder/spindly
 
+Build on Mac OS X:
+ Install the following packages from ports:
+- pkgconfig
+- check
+
 Hopefully we will merge again with the libspdy.org team in a not too distant
 future. In the mean time we move ahead.
 

@@ -11,6 +11,7 @@ bin/create_nv_block
 src/spdy_config.h
 autom4te.cache
 Makefile
+libtool
 compile
 config.log
 config.status
