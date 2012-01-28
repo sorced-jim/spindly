@@ -84,7 +84,7 @@ am_libspdy_la_OBJECTS = libspdy_la-spdy_control_frame.lo \
 libspdy_la_OBJECTS = $(am_libspdy_la_OBJECTS)
 libspdy_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(libspdy_la_CFLAGS) \
-	$(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+	$(CFLAGS) $(libspdy_la_LDFLAGS) $(LDFLAGS) -o $@
 DEFAULT_INCLUDES = 
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
@@ -228,6 +228,7 @@ libspdy_la_SOURCES = spdy_control_frame.c spdy_data.c spdy_data_frame.c	      \
   $(SPINDLY_SOURCES)
 
 libspdy_la_CFLAGS = -I$(top_srcdir)/include
+libspdy_la_LDFLAGS = `pkg-config --libs zlib`
 
 # This flag accepts an argument of the form current[:revision[:age]]. So,
 # passing -version-info 3:12:1 sets current to 3, revision to 12, and age to
