@@ -4,16 +4,16 @@
 #include <stdio.h>
 
 
-#ifdef DEBUG
+#ifndef NDEBUG
 /**
  * fprintf logging macro for libspdy.
  */
 #define SPDYDEBUG(msg) \
-	fprintf(stderr, "%s:%d:%s: ", __FILE__, __LINE__); \
+	fprintf(stderr, "%s:%d: ", __FILE__, __LINE__); \
 	fprintf(stderr, msg); \
 	fprintf(stderr, "\n");
 #else
-#define SPDYDEBUG(msg)
+#define SPDYDEBUG(msg) do { } while(0)
 #endif
 
 #endif
